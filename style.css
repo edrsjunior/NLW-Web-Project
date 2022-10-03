@@ -10,8 +10,9 @@ ul{
 
 header{
     margin-top: 32px;
-}
+    height: calc(120px + 32px)
 
+}
 header div{
     width: 120px;
     margin: auto;
@@ -19,6 +20,11 @@ header div{
     border-radius: 50%;
     display: flex;
     padding: 2px;
+    transition: transform .3s;
+}
+
+header div:hover{
+    transform: scale(1.1);
 }
 
 header div img {
@@ -40,7 +46,7 @@ body * {
 }
 
 main{
-    margin: 32px auto;
+    margin: auto;
     max-width: 580px;
     width: 90%;
     display: grid;
@@ -81,6 +87,14 @@ section ul{
     gap: 16px;
 }
 
+section ul li{
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
 .games-list img{
     width: 90px;
     border-radius: 8px;
@@ -90,4 +104,50 @@ section ul{
     width: 70px;
     border-radius: 50%;
     border: 1px solid #443E54;
+}
+
+/* ANIMATION */
+
+header div{
+    animation: fromTop .7s .2s backwards;
+}
+
+main section{
+    animation: fromButtom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+main section:nth-child(3){
+    animation-delay: .8s;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromButtom {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
