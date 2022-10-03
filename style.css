@@ -8,12 +8,22 @@ ul{
     list-style: none;
 }
 
-header div img {
-    margin: auto;
+header{
+    margin-top: 32px;
 }
 
-#profile{
+header div{
     width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
 }
 
 body{
@@ -30,11 +40,9 @@ body * {
 }
 
 main{
-    margin-top: 32;
+    margin: 32px auto;
     max-width: 580px;
     width: 90%;
-    margin: auto;
-
     display: grid;
     gap: 24px;
 }
@@ -81,4 +89,5 @@ section ul{
 .channels-list img{
     width: 70px;
     border-radius: 50%;
+    border: 1px solid #443E54;
 }
